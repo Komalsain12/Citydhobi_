@@ -2,6 +2,31 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Phone, MessageCircle } from "lucide-react";
+import shirtIcon from "@/assets/shirt-icon.png";
+import coatIcon from "@/assets/coat-icon.png";
+import sareeIcon from "@/assets/saree-icon.png";
+import lehengaIcon from "@/assets/lehenga-icon.png";
+import kidsIcon from "@/assets/kids-icon.png";
+
+const iconMap: { [key: string]: string } = {
+  "Shirt": shirtIcon,
+  "Pant/Trouser": shirtIcon,
+  "Coat/Blazer": coatIcon,
+  "Suit (2 Piece)": coatIcon,
+  "Suit (3 Piece)": coatIcon,
+  "Tie": shirtIcon,
+  "Saree (Plain)": sareeIcon,
+  "Saree (Designer)": sareeIcon,
+  "Lehenga/Gown": lehengaIcon,
+  "Dress": lehengaIcon,
+  "Kurti": sareeIcon,
+  "Salwar Suit": sareeIcon,
+  "Shirt/Top": kidsIcon,
+  "Pant/Skirt": kidsIcon,
+  "School Uniform": kidsIcon,
+  "Jacket": kidsIcon,
+  "Sweater": kidsIcon,
+};
 
 const pricingData = {
   male: [
@@ -38,11 +63,20 @@ const Pricing = () => {
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {items.map((service, index) => (
         <Card key={index} className="group hover:shadow-large transition-smooth border-2 hover:border-primary/30">
-          <CardHeader className="pb-4">
-            <CardTitle className="text-xl flex justify-between items-center">
-              <span>{service.item}</span>
-              <span className="text-primary font-bold">₹{service.price}</span>
-            </CardTitle>
+          <CardHeader className="pb-3">
+            <div className="flex items-center gap-4 mb-3">
+              <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-smooth flex-shrink-0">
+                <img 
+                  src={iconMap[service.item]} 
+                  alt={service.item}
+                  className="w-10 h-10 object-contain"
+                />
+              </div>
+              <CardTitle className="text-xl flex-1 flex justify-between items-center">
+                <span className="text-foreground">{service.item}</span>
+                <span className="text-primary font-bold whitespace-nowrap">₹{service.price}</span>
+              </CardTitle>
+            </div>
           </CardHeader>
           <CardContent className="space-y-3">
             <Button
