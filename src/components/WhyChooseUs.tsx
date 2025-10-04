@@ -79,16 +79,16 @@ const WhyChooseUs = () => {
           <h3 className="text-2xl font-bold mb-4">What Makes Us Different?</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <div>
-              <div className="text-3xl font-bold text-accent mb-2">15+</div>
-              <div className="text-white/80">Years Experience</div>
+              <div className="text-3xl font-bold text-white mb-2">15+</div>
+              <div className="text-white/90">Years Experience</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-accent mb-2">10,000+</div>
-              <div className="text-white/80">Happy Customers</div>
+              <div className="text-3xl font-bold text-white mb-2">10,000+</div>
+              <div className="text-white/90">Happy Customers</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-accent mb-2">50+</div>
-              <div className="text-white/80">Sectors Covered</div>
+              <div className="text-3xl font-bold text-white mb-2">50+</div>
+              <div className="text-white/90">Sectors Covered</div>
             </div>
           </div>
         </div>
