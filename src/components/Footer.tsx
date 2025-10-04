@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, MapPin } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -10,10 +10,13 @@ const Footer = () => {
           {/* About */}
           <div>
             <h3 className="text-xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              Usha Drycleaners
+              CityDhobi
             </h3>
             <p className="text-white/80 mb-4">
               Your trusted partner for premium dry cleaning, laundry, and garment care services in Gurgaon.
+            </p>
+            <p className="text-white/60 text-sm">
+              Owner: Deepanshu Arya
             </p>
           </div>
 
@@ -34,18 +37,16 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start gap-2">
                 <MapPin className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                <span className="text-white/80">Sector XX, Gurgaon, Haryana</span>
+                <span className="text-white/80">
+                  Vishnu Garden, Sector 105<br />
+                  Gurgaon, Haryana - 122001<br />
+                  <span className="text-sm">(Near Golden Valley School)</span>
+                </span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="w-5 h-5 flex-shrink-0" />
-                <a href="tel:+919999999999" className="text-white/80 hover:text-white transition-smooth">
-                  +91 9999999999
-                </a>
-              </li>
-              <li className="flex items-center gap-2">
-                <Mail className="w-5 h-5 flex-shrink-0" />
-                <a href="mailto:info@ushadrycleaners.com" className="text-white/80 hover:text-white transition-smooth">
-                  info@ushadrycleaners.com
+                <a href="tel:+917678667708" className="text-white/80 hover:text-white transition-smooth">
+                  +91 7678667708
                 </a>
               </li>
             </ul>
@@ -53,7 +54,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-white/20 pt-8 text-center text-white/60">
-          <p>&copy; {currentYear} Usha Drycleaners. All rights reserved.</p>
+          <p>&copy; {currentYear} CityDhobi. All rights reserved.</p>
         </div>
       </div>
     </footer>

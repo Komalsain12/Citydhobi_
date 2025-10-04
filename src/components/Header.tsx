@@ -2,8 +2,8 @@ import { Phone, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Header = () => {
-  const phoneNumber = "9999999999";
-  const whatsappNumber = "919999999999";
+  const phoneNumber = "7678667708";
+  const whatsappNumber = "917678667708";
 
   return (
     <header className="bg-white shadow-soft sticky top-0 z-50">
@@ -11,9 +11,11 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="text-2xl sm:text-3xl font-bold bg-gradient-hero bg-clip-text text-transparent">
-              Usha Drycleaners
-            </h1>
+            <a href="/">
+              <h1 className="text-2xl sm:text-3xl font-bold bg-gradient-hero bg-clip-text text-transparent">
+                CityDhobi
+              </h1>
+            </a>
           </div>
 
           {/* Navigation */}

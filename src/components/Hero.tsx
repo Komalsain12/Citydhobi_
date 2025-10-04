@@ -3,8 +3,8 @@ import { Phone, MessageCircle } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
 
 const Hero = () => {
-  const phoneNumber = "9999999999"; // User can change this
-  const whatsappNumber = "919999999999"; // User can change this (with country code)
+  const phoneNumber = "7678667708";
+  const whatsappNumber = "917678667708";
 
   return (
     <section className="relative min-h-[600px] lg:min-h-[700px] flex items-center overflow-hidden">

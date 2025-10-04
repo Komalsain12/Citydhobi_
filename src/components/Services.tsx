@@ -1,4 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { useNavigate } from "react-router-dom";
 import washFoldIcon from "@/assets/wash-fold-icon.png";
 import drycleanIcon from "@/assets/dryclean-icon.png";
 import ironIcon from "@/assets/iron-icon.png";
@@ -9,25 +10,31 @@ const services = [
     icon: washFoldIcon,
     title: "Wash & Fold",
     description: "Professional laundry service with careful washing, drying, and neat folding. Your clothes treated with premium detergents.",
+    link: "/service/wash-fold",
   },
   {
     icon: drycleanIcon,
     title: "Dry Cleaning",
     description: "Expert dry cleaning for delicate fabrics, suits, dresses, and formal wear. Stain removal and fabric care guaranteed.",
+    link: "/service/dry-cleaning",
   },
   {
     icon: ironIcon,
     title: "Steam Ironing",
     description: "Crisp, wrinkle-free clothes with professional steam ironing. Perfect finish for all your garments.",
+    link: "/service/steam-ironing",
   },
   {
     icon: shoeBagIcon,
     title: "Shoe & Bag Cleaning",
     description: "Specialized cleaning for shoes, bags, and leather goods. Restore your accessories to their original glory.",
+    link: "/service/shoe-bag-cleaning",
   },
 ];
 
 const Services = () => {
+  const navigate = useNavigate();
+  
   return (
     <section id="services" className="py-16 lg:py-24 bg-gradient-card">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -45,6 +52,7 @@ const Services = () => {
             <Card 
               key={index} 
               className="group hover:shadow-large transition-smooth cursor-pointer border-2 hover:border-primary/20"
+              onClick={() => navigate(service.link)}
             >
               <CardContent className="p-6 text-center">
                 <div className="mb-6 flex justify-center">

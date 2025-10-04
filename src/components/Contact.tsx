@@ -1,9 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { Phone, MessageCircle, MapPin, Mail } from "lucide-react";
+import { Phone, MessageCircle, MapPin } from "lucide-react";
 
 const Contact = () => {
-  const phoneNumber = "9999999999"; // User can change this
-  const whatsappNumber = "919999999999"; // User can change this (with country code)
+  const phoneNumber = "7678667708";
+  const whatsappNumber = "917678667708";
 
   return (
     <section id="contact" className="py-16 lg:py-24 bg-gradient-hero">
@@ -55,20 +55,15 @@ const Contact = () => {
           </div>
 
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 border border-white/20">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-white">
-              <div className="flex items-start gap-3">
-                <MapPin className="w-6 h-6 flex-shrink-0 mt-1" />
-                <div className="text-left">
-                  <div className="font-semibold mb-1">Visit Us</div>
-                  <div className="text-white/80">Sector XX, Gurgaon, Haryana</div>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-3">
-                <Mail className="w-6 h-6 flex-shrink-0 mt-1" />
-                <div className="text-left">
-                  <div className="font-semibold mb-1">Email Us</div>
-                  <div className="text-white/80">info@ushadrycleaners.com</div>
+            <div className="flex items-start gap-3 text-white justify-center">
+              <MapPin className="w-6 h-6 flex-shrink-0 mt-1" />
+              <div className="text-left">
+                <div className="font-semibold mb-1">Visit Us</div>
+                <div className="text-white/80">
+                  Usha Drycleaning and Laundry Service<br />
+                  Vishnu Garden, Sector 105<br />
+                  Gurgaon, Haryana - 122001<br />
+                  <span className="text-sm">(Near Golden Valley School)</span>
                 </div>
               </div>
             </div>

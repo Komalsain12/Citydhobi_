@@ -30,36 +30,36 @@ const iconMap: { [key: string]: string } = {
 
 const pricingData = {
   male: [
-    { item: "Shirt", price: 40 },
-    { item: "Pant/Trouser", price: 60 },
-    { item: "Coat/Blazer", price: 150 },
-    { item: "Suit (2 Piece)", price: 250 },
-    { item: "Suit (3 Piece)", price: 350 },
-    { item: "Tie", price: 30 },
+    { item: "Shirt", price: 40, service: "Dry Cleaning" },
+    { item: "Pant/Trouser", price: 60, service: "Dry Cleaning" },
+    { item: "Coat/Blazer", price: 150, service: "Dry Cleaning" },
+    { item: "Suit (2 Piece)", price: 250, service: "Dry Cleaning" },
+    { item: "Suit (3 Piece)", price: 350, service: "Dry Cleaning" },
+    { item: "Tie", price: 30, service: "Dry Cleaning" },
   ],
   female: [
-    { item: "Saree (Plain)", price: 80 },
-    { item: "Saree (Designer)", price: 150 },
-    { item: "Lehenga/Gown", price: 400 },
-    { item: "Dress", price: 120 },
-    { item: "Kurti", price: 60 },
-    { item: "Salwar Suit", price: 150 },
+    { item: "Saree (Plain)", price: 80, service: "Dry Cleaning" },
+    { item: "Saree (Designer)", price: 150, service: "Dry Cleaning" },
+    { item: "Lehenga/Gown", price: 400, service: "Dry Cleaning" },
+    { item: "Dress", price: 120, service: "Dry Cleaning" },
+    { item: "Kurti", price: 60, service: "Dry Cleaning" },
+    { item: "Salwar Suit", price: 150, service: "Dry Cleaning" },
   ],
   kids: [
-    { item: "Shirt/Top", price: 30 },
-    { item: "Pant/Skirt", price: 40 },
-    { item: "Dress", price: 80 },
-    { item: "School Uniform", price: 50 },
-    { item: "Jacket", price: 100 },
-    { item: "Sweater", price: 60 },
+    { item: "Shirt/Top", price: 30, service: "Dry Cleaning" },
+    { item: "Pant/Skirt", price: 40, service: "Dry Cleaning" },
+    { item: "Dress", price: 80, service: "Dry Cleaning" },
+    { item: "School Uniform", price: 50, service: "Dry Cleaning" },
+    { item: "Jacket", price: 100, service: "Dry Cleaning" },
+    { item: "Sweater", price: 60, service: "Dry Cleaning" },
   ],
 };
 
 const Pricing = () => {
-  const phoneNumber = "9999999999";
-  const whatsappNumber = "919999999999";
+  const phoneNumber = "7678667708";
+  const whatsappNumber = "917678667708";
 
-  const PricingCard = ({ items }: { items: { item: string; price: number }[] }) => (
+  const PricingCard = ({ items }: { items: { item: string; price: number; service: string }[] }) => (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {items.map((service, index) => (
         <Card key={index} className="group hover:shadow-large transition-smooth border-2 hover:border-primary/30">
@@ -72,9 +72,12 @@ const Pricing = () => {
                   className="w-10 h-10 object-contain"
                 />
               </div>
-              <CardTitle className="text-xl flex-1 flex justify-between items-center">
-                <span className="text-foreground">{service.item}</span>
-                <span className="text-primary font-bold whitespace-nowrap">₹{service.price}</span>
+              <CardTitle className="text-xl flex-1">
+                <span className="text-foreground block">{service.item}</span>
+                <div className="flex items-center justify-between mt-2">
+                  <span className="text-sm text-muted-foreground font-normal">{service.service}</span>
+                  <span className="text-primary font-bold whitespace-nowrap">₹{service.price}</span>
+                </div>
               </CardTitle>
             </div>
           </CardHeader>
